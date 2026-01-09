@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  font-family: Georgia, serif;
+  color: white;
+  background: black;
+  overflow-x: hidden;
+}
+
+/* STANZA */
+.stanza {
+  height: 100vh;
+  position: relative;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GIF BACKGROUNDS */
+.gif {
+  background-size: cover;
+  background-position: center;
+}
+
+.bg1 { background-image: url("media/bg1.gif"); }
+.bg2 { background-image: url("media/bg2.gif"); }
+.bg3 { background-image: url("media/bg3.gif"); }
+.bg4 { background-image: url("media/bg4.gif"); }
+
+/* VIDEO BACKGROUND */
+.video-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* POEM BOX */
+.poem {
+  background: rgba(0,0,0,0.55);
+  padding: 45px 60px;
+  border-radius: 20px;
+  font-size: 2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* HYPER WORDS */
+.link {
+  color: #9ad9ff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link1 {
+  color: #b99d38;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link2 {
+  color: #38b93e;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link3 {
+  color: #a03a3a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-shadow: 0 0 15px #9ad9ff;
+}
+
+/* FADE */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1.2s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SLIDE */
+.slide {
+  transform: translateX(-40px);
+}
+
+/* TYPEWRITER */
+.type p {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  animation: typing 4s steps(40), blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* BEAT PULSE */
+.beat.active {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1) }
+  50% { transform: scale(1.03) }
+  100% { transform: scale(1) }
+}
+
+/* PARALLAX */
+.parallax {
+  background-attachment: fixed;
+}
+
+/* MUSIC BUTTON */
+#musicBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: 1px solid white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#popupImg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80vw;
+  max-height: 80vh;
+  display: none;
+  z-index: 9999;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.4);
+}
+
+
+
+#videoPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  display: none;
+  z-index: 9999;
+}
+
+#videoPopup video {
+  width: 100%;
+  border-radius: 15px;
+}
