@@ -41,29 +41,17 @@ const popupImg = document.getElementById("popupImg");
 
 document.querySelectorAll("[data-img]").forEach(word => {
   word.addEventListener("click", () => {
+    // Update the src of the same popup
     popupImg.src = word.dataset.img;
     popupImg.style.display = "block";
   });
 });
 
-// click image to close
+// click anywhere on image to close
 popupImg.addEventListener("click", () => {
   popupImg.style.display = "none";
 });
 
-const popupImg1 = document.getElementById("popupImg1");
-
-document.querySelectorAll("[data-img]").forEach(word => {
-  word.addEventListener("click", () => {
-    popupImg1.src = word.dataset.img;
-    popupImg1.style.display = "block";
-  });
-});
-
-// click image to close
-popupImg1.addEventListener("click", () => {
-  popupImg1.style.display = "none";
-});
 
 
 document.querySelectorAll("[data-link]").forEach(word => {
