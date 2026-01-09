@@ -149,19 +149,17 @@ body {
 }
 
 #popupImg {
-  position: fixed;        /* always stays on screen */
+  position: fixed;           /* always on screen */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 80vw;
   max-height: 80vh;
   display: none;
-  z-index: 9999;          /* always on top */
+  z-index: 99999;            /* above everything */
   border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
-
-
-
 
 
 #videoPopup {
