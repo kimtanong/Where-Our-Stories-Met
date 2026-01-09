@@ -1,4 +1,4 @@
 # Where-Our-Stories-Met
-Andrea D. Maylas
-11 STEM - Idocraze
+<h1>Andrea D. Maylas</h1> <br>
+11 STEM - Idocraze <br>
 Hyperpoetry - 21st Century
