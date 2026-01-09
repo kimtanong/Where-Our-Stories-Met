@@ -37,20 +37,23 @@ document.querySelectorAll(".link").forEach(word => {
 });
 
 
+// universal popup image
 const popupImg = document.getElementById("popupImg");
 
+// click on any word with data-img attribute
 document.querySelectorAll("[data-img]").forEach(word => {
   word.addEventListener("click", () => {
-    // Update the src of the same popup
-    popupImg.src = word.dataset.img;
-    popupImg.style.display = "block";
+    popupImg.src = word.dataset.img;      // change to correct image
+    popupImg.style.display = "block";     // show it
+    popupImg.style.zIndex = "99999";      // force on top
   });
 });
 
-// click anywhere on image to close
+// hide when clicking the image itself
 popupImg.addEventListener("click", () => {
   popupImg.style.display = "none";
 });
+
 
 
 
